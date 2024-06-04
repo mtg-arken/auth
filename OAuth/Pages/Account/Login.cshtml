@@ -1,0 +1,16 @@
+﻿@page "/oauth/login"
+@model OAuth.Pages.Account.LoginModel
+@{
+}
+<div>
+    <h1>Authorize</h1>
+    <form method="post">
+        <input type="hidden" name="response_type" value="@Request.Query["response_type"]" />
+        <input type="hidden" name="client_id" value="@Request.Query["client_id"]" />
+        <input type="hidden" name="redirect_uri" value="@Request.Query["redirect_uri"]" />
+        <input type="hidden" name="scope" value="@Request.Query["scope"]" />
+        <input type="hidden" name="state" value="@Request.Query["state"]" />
+        <button type="submit">Authorize</button>
+    </form>
+
+</div>
